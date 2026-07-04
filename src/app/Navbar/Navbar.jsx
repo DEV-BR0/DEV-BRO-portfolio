@@ -1,11 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { Moon, Pause, Play, Sun } from "lucide-react";
+import { Pause, Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 function Navbar({ Functheme }) {
-  const [theme, setTheme] = useState("light");
   const [active, setActive] = useState("home");
   const [start, setSart] = useState(false);
   const audioRef = useRef(null);
@@ -21,9 +20,6 @@ function Navbar({ Functheme }) {
     }
   }, [start]);
 
-  function Functheme() {
-    document.body.classList.toggle("dark");
-  }
   return (
     <div className=" flex justify-center items-center p-[45px]">
       <div className=" contenr w-full items-center fixed gap-[40px]  backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl flex justify-between  text-white p-[12px] pl-[20px] pr-[20px]">

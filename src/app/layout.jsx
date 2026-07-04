@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col items-center ">
         <InfinityBackground />  
         <Navbar />
-        <main className="min-h-full flex flex-col mt-[20px]">{children}</main>
+        <main className="min-h-full flex flex-col mt-[20px] w-full max-w-[1300px]">{children}</main>
       </body>
     </html>
   );
