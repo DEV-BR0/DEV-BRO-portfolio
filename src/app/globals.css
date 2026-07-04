@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+.contenr {
+  max-width: 1300px;
+  width: 100%;
+  margin: auto;
+}
+
+.dark{
+  color: white;
+  background-color: black;
+}
