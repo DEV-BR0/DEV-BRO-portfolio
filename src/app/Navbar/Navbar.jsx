@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { Pause, Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from 'next/navigation';
 
-function Navbar({ Functheme }) {
+function Navbar() {
   const [active, setActive] = useState("home");
+  const pathname = usePathname();
   const [start, setSart] = useState(false);
   const audioRef = useRef(null);
   useEffect(() => {
@@ -19,6 +21,18 @@ function Navbar({ Functheme }) {
       audioRef.current.pause();
     }
   }, [start]);
+
+  useEffect(() => {
+    if (pathname === "/") {
+      setActive("home");
+    } else if (pathname === "/about") {
+      setActive("about");
+    } else if (pathname === "/projects") {
+      setActive("projects");
+    } else if (pathname === "/contact") {
+      setActive("contact");
+    }
+  }, [pathname]);
 
   return (
     <div className=" flex justify-center items-center p-[45px]">
