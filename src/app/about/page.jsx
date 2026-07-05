@@ -7,7 +7,10 @@ function page() {
   }, []);
   return (
     <div>
-      <h1 className="">aboutga hush kkelibsiz</h1>
+      <h1 className="text-[40px] font-bold text-white">About Me</h1>
+      <pre>
+        
+      </pre>
     </div>
   );
 }
