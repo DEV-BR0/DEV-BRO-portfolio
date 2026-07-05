@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect } from "react";
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
 function page() {
   useEffect(() => {
     document.title = "DEV-BRO | Home";
@@ -37,13 +37,41 @@ function page() {
             </Link>
           </div>
         </div>
-        <div className="img">
+        <div className="flex flex-col items-center gap-[20px]">
           <img
             src="./hom.jpg"
             alt="Photo"
             className="rounded-[50%] w-[350px] md:w-[400px] lg:w-[450px]"
           />
-          <Link href={'github.com/DEV-BR0'}><Github/>Github</Link>
+          <div className="flex gap-[20px] flex-wrap justify-center">
+            <Link
+              href={"https://github.com/DEV-BR0"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 flex gap-[8px] items-center p-[10px] text-[20px]"
+            >
+              <FaGithub />
+              Github
+            </Link>
+            <Link
+              href={"https://www.linkedin.com/in/ubaydulloh-dadahanov-8219a43b3"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 flex gap-[8px] items-center p-[10px] text-[20px]"
+            >
+              <FaLinkedin />
+              Linkedin
+            </Link>
+            <Link
+              href={"https://t.me/DEV_BR0"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 flex gap-[8px] items-center p-[10px] text-[20px]"
+            >
+              <FaTelegramPlane />
+              Telegram
+            </Link>
+          </div>
         </div>
       </div>
     </>
