@@ -48,6 +48,7 @@ high-quality software that makes a real impact.`}
               {skill}
             </span>
           ))}
+
           
         </div>
       </div>
