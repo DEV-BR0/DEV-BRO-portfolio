@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col items-center ">
+      <body className="min-h-full flex flex-col items-center contenr ">
         <InfinityBackground />  
         <Navbar />
         <main className="min-h-full flex flex-col mt-[20px] w-full max-w-[1300px]">{children}</main>
