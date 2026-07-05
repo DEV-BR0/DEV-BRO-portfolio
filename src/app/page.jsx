@@ -43,7 +43,7 @@ function page() {
             alt="Photo"
             className="rounded-[50%] w-[350px] md:w-[400px] lg:w-[450px]"
           />
-          <div className="flex gap-[20px] flex-wrap justify-center">
+          <div className="flex gap-[20px] lg:flex-nowrap flex-wrap justify-center">
             <Link
               href={"https://github.com/DEV-BR0"}
               target="_blank"
