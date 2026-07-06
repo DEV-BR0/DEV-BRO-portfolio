@@ -1,6 +1,7 @@
 "use client";
 import { useGSAP } from "@gsap/react";
 import { Icon } from "@iconify/react";
+import Aos from "aos";
 import gsap from "gsap";
 import { useEffect } from "react";
 function page() {
@@ -27,8 +28,23 @@ function page() {
     { name: "REST API", icon: "logos:openapi-icon" },
     { name: "AI-Powered Development", icon: "simple-icons:openai" },
     { name: "node-telegram-bot-api", icon: "logos:telegram" },
+    { name: "Python", icon: "logos:python" },
   ];
 
+  const tools = [
+    { name: "Git", icon: "logos:git-icon" },
+    { name: "GitHub", icon: "simple-icons:github" },
+    { name: "VS Code", icon: "logos:visual-studio-code" },
+    { name: "Figma", icon: "logos:figma" },
+    { name: "Vercel", icon: "simple-icons:vercel" },
+    { name: "Netlify", icon: "simple-icons:netlify" },
+    { name: "npm", icon: "logos:npm-icon" },
+    { name: "Prettier", icon: "logos:prettier" },
+    { name: "Vite", icon: "logos:vitejs" },
+    { name: "OpenAI", icon: "simple-icons:openai" },
+    { name: "Google Gemini", icon: "simple-icons:googlegemini" },
+    { name: "Claude", icon: "simple-icons:claude" },
+  ];
   useGSAP(() => {
     gsap.from(".skile", {
       y: 70,
@@ -48,6 +64,13 @@ function page() {
   });
 
   useEffect(() => {
+    Aos.init({
+      duration: 500,
+      once: true,
+    });
+  }, []);
+
+  useEffect(() => {
     document.title = "DEV-BRO | About";
   }, []);
 
@@ -57,17 +80,19 @@ function page() {
         <div className="flex flex-col gap-[30px]">
           <h1 className="about text-[40px] font-bold text-white ">About Me</h1>
           <div className="flex flex-col lg:flex-row gap-[30px] lg:items-center items-start ">
-            <pre className="about  text-white font-medium font-sans lg:text-[20px] md:text-[18px] sm:text-[20px] text-[12px]">
-              {`I'm Ubaydulloh Dadaxonov, a passionate Full-Stack Developer
+            <div className="flex flex-col gap-[30px]">
+              <pre className="about  text-white font-medium font-sans lg:text-[20px] md:text-[18px] sm:text-[20px] text-[12px]">
+                {`I'm Ubaydulloh Dadaxonov, a passionate Full-Stack Developer
 focused on building modern, responsive, and scalable web
 applications. I enjoy creating clean and user-friendly
 digital experiences while continuously learning new
 technologies and improving my skills. My goal is to build
 high-quality software that makes a real impact.`}
-            </pre>
+              </pre>
+            </div>
             <div className="flex flex-wrap gap-[10px] ">
               {skills.map((skill, i) => (
-                <div className="skile" key={i}>
+                <div className="skile cursor-pointer" key={i}>
                   <span className=" flex rounded-full border hover:border-white/60 hover: border-white/20 bg-white/5 px-4 py-2 text-white backdrop-blur transition duration-200 justify-center items-center gap-[10px] hover:text-white/50">
                     <Icon icon={skill.icon} height={30} />
                     {skill.name}
@@ -78,17 +103,35 @@ high-quality software that makes a real impact.`}
           </div>
         </div>
         <div className="about-bottom overflow-hidden whitespace-nowrap">
-          <div className="flex w-max animate-marquee gap-8 mt-[70px]">
+          <div
+            data-aos="fade-up"
+            className="flex w-max animate-marquee gap-8 mt-[70px]"
+          >
             {skills.map((skill, i) => (
               <span
                 key={i}
-                className="flex rounded-full border hover:border-white/60 hover: border-white/20 bg-white/5 px-4 py-2 text-white backdrop-blur transition duration-200 justify-center items-center gap-[10px] hover:text-white/50"
+                className="flex rounded-full border hover:border-white/60 hover: border-white/20 bg-white/5 px-4 py-2 text-white backdrop-blur transition duration-200 justify-center items-center gap-[10px] hover:text-white/50 cursor-pointer"
               >
                 <Icon icon={skill.icon} height={30} />
                 {skill.name}
               </span>
             ))}
           </div>
+        </div>
+      </div>
+      <div className="flex flex-col gap-[30px]">
+        <div className="">
+          <h1 className="text-white text-[27px] font-bold">Tools</h1>
+        </div>
+        <div className="flex flex-wrap text-white gap-[10px]">
+          {tools.map((skill, i) => (
+            <div className="skile cursor-pointer" key={i}>
+              <span className=" flex rounded-full border hover:border-white/60 hover: border-white/20 bg-white/5 px-4 py-2 text-white backdrop-blur transition duration-200 justify-center items-center gap-[10px] hover:text-white/50">
+                <Icon icon={skill.icon} height={30} />
+                {skill.name}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </div>

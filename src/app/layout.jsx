@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import InfinityBackground from "@/app/backgraund";
-import ContourBackground from "./backgraundLight";
 import "./globals.css";
+import "aos/dist/aos.css"
 import Navbar from "./Navbar/Navbar";
 
 const geistSans = Geist({

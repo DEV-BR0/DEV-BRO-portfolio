@@ -78,7 +78,7 @@ with clean, maintainable code and a great user experience.`}
             <div className="ong">
               <Link
                 href={
-                  "https://www.linkedin.com/in/ubaydulloh-dadahanov-8219a43b3"
+                  "https://www.linkedin.com/in/ubaydulloh-dadahanov"
                 }
                 target="_blank"
                 rel="noopener noreferrer"
