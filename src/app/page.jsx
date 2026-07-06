@@ -9,8 +9,8 @@ function page() {
   });
   return (
     <>
-      <div className="anima lg:flex-row flex flex-col-reverse lg:justify-between justify-center items-center w-full h-full items-center pt-[120px]">
-        <div className="flex flex-col items-center gap-[20px]">
+      <div className="anima lg:flex-row flex flex-col-reverse w-full h-full items-center justify-center">
+        <div className="flex flex-col items-center items-center justify-center gap-[20px]">
           <div className="flex flex-col items-center">
             <p className="text-white lg:text-[80px] md:text-[70px] text-[30px] font-medium text-center">
               Hi I'm{" "}
