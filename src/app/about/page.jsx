@@ -96,7 +96,7 @@ high-quality software that makes a real impact.`}
           </div>
         </div>
         <div className="about-bottom overflow-hidden whitespace-nowrap">
-          <div id="box" className="flex w-max animate-marquee gap-8 mt-[70px]">
+          <div  className="flex w-max animate-marquee gap-8 mt-[70px]">
             {skills.map((skill, i) => (
               <span
                 key={i}
