@@ -1,64 +1,63 @@
 "use client";
+import { useGSAP } from "@gsap/react";
+import { Icon } from "@iconify/react";
+import gsap from "gsap";
 import { useEffect } from "react";
-import { FaBrain, FaReact } from "react-icons/fa";
-import { FaWandMagicSparkles } from "react-icons/fa6";
-import {
-  SiCss,
-  SiElectron,
-  SiExpress,
-  SiFlask,
-  SiGsap,
-  SiHtml5,
-  SiJavascript,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiOpenapiinitiative,
-  SiPreact,
-  SiReact,
-  SiSass,
-  SiSvelte,
-  SiTailwindcss,
-  SiTelegram,
-  SiVuedotjs,
-  SiWebpack,
-} from "react-icons/si";
-
 function page() {
   const skills = [
-    { name: "HTML", icon: <SiHtml5 /> },
-    { name: "CSS", icon: <SiCss /> },
-    { name: "JavaScript", icon: <SiJavascript /> },
-    { name: "React", icon: <SiReact /> },
-    { name: "Next.js", icon: <SiNextdotjs /> },
-    { name: "Vue.js", icon: <SiVuedotjs /> },
-    { name: "Preact", icon: <SiPreact /> },
-    { name: "Svelte", icon: <SiSvelte /> },
-    { name: "SvelteKit", icon: <SiSvelte /> }, // alohida icon yo'q
-    { name: "Electron", icon: <SiElectron /> },
-    { name: "SASS", icon: <SiSass /> },
-    { name: "Tailwind CSS", icon: <SiTailwindcss /> },
-    { name: "GSAP", icon: <SiGsap /> },
-    { name: "AOS", icon: <FaWandMagicSparkles /> },
-    { name: "React Native", icon: <FaReact /> }, // alohida icon yo'q
-    { name: "Node.js", icon: <SiNodedotjs /> },
-    { name: "Express.js", icon: <SiExpress /> },
-    { name: "Flask", icon: <SiFlask /> },
-    { name: "Webpack", icon: <SiWebpack /> },
-    { name: "REST API", icon: <SiOpenapiinitiative /> },
-    { name: "AI-Powered Development", icon: <FaBrain /> },
-    { name: "node-telegram-bot-api", icon: <SiTelegram /> },
+    { name: "HTML", icon: "vscode-icons:file-type-html" },
+    { name: "CSS", icon: "vscode-icons:file-type-css" },
+    { name: "JavaScript", icon: "logos:javascript" },
+    { name: "React", icon: "logos:react" },
+    { name: "Next.js", icon: "logos:nextjs-icon" },
+    { name: "Vue.js", icon: "logos:vue" },
+    { name: "Preact", icon: "logos:preact" },
+    { name: "Svelte", icon: "logos:svelte-icon" },
+    { icon: "logos:svelte-kit" },
+    { name: "Electron", icon: "logos:electron" },
+    { name: "SASS", icon: "logos:sass" },
+    { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
+    { name: "GSAP", icon: "logos:greensock-icon" },
+    { name: "AOS", icon: "solar:magic-stick-3-bold-duotone" }, // AOS rasmiysi yo'q
+    { name: "React Native", icon: "logos:react" },
+    { name: "Node.js", icon: "logos:nodejs-icon" },
+    { name: "Express.js", icon: "skill-icons:expressjs-dark" },
+    { name: "Flask", icon: "skill-icons:flask-light" },
+    { name: "Webpack", icon: "logos:webpack" },
+    { name: "REST API", icon: "logos:openapi-icon" },
+    { name: "AI-Powered Development", icon: "simple-icons:openai" },
+    { name: "node-telegram-bot-api", icon: "logos:telegram" },
   ];
+
+  useGSAP(() => {
+    gsap.from(".skile", {
+      y: 70,
+      opacity: 0,
+      stagger: 0.03,
+    });
+    gsap.from(".about", {
+      x: -100,
+      opacity: 0,
+      stagger: 0.1,
+    });
+
+    gsap.from(".about-bottom ", {
+      y: 100,
+      opacity: 0,
+    });
+  });
 
   useEffect(() => {
     document.title = "DEV-BRO | About";
   }, []);
+
   return (
-    <div className="flex gap-[20px] flex-col h-[70vh] justify-center mt-[150px] lg:mt-[-100px] sm:mt-[-0px]">
+    <div className="flex gap-[20px]  flex-col  justify-center mt-[0px] lg:mt-[-100px] sm:mt-[-0px]">
       <div className="flex flex-col gap-[20px] justify-end">
         <div className="flex flex-col gap-[30px]">
-          <h1 className="text-[40px] font-bold text-white">About Me</h1>
+          <h1 className="about text-[40px] font-bold text-white ">About Me</h1>
           <div className="flex flex-col lg:flex-row gap-[30px] lg:items-center items-start ">
-            <pre className="text-white font-medium font-sans lg:text-[20px] md:text-[18px] sm:text-[20px] text-[12px]">
+            <pre className="about  text-white font-medium font-sans lg:text-[20px] md:text-[18px] sm:text-[20px] text-[12px]">
               {`I'm Ubaydulloh Dadaxonov, a passionate Full-Stack Developer
 focused on building modern, responsive, and scalable web
 applications. I enjoy creating clean and user-friendly
@@ -66,31 +65,26 @@ digital experiences while continuously learning new
 technologies and improving my skills. My goal is to build
 high-quality software that makes a real impact.`}
             </pre>
-            <div className="flex flex-wrap gap-[10px]">
-              {skills.map((item) => {
-                return (
-                  <div
-                    key={item.name}
-                    className="flex rounded-full border hover:border-white/60 hover: border-white/20 bg-white/5 px-4 py-2 text-white backdrop-blur transition duration-200 justify-center items-center gap-[10px] hover:text-white/50 lg:text-[18px] md:text-[16px]"
-                  >
-                    <span className="" key={item.name}>
-                      {item.icon}
-                    </span>
-                    <p className="">{item.name}</p>
-                  </div>
-                );
-              })}
+            <div className="flex flex-wrap gap-[10px] ">
+              {skills.map((skill, i) => (
+                <div className="skile" key={i}>
+                  <span className=" flex rounded-full border hover:border-white/60 hover: border-white/20 bg-white/5 px-4 py-2 text-white backdrop-blur transition duration-200 justify-center items-center gap-[10px] hover:text-white/50">
+                    <Icon icon={skill.icon} height={30} />
+                    {skill.name}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-        <div className="overflow-hidden whitespace-nowrap">
+        <div className="about-bottom overflow-hidden whitespace-nowrap">
           <div className="flex w-max animate-marquee gap-8 mt-[70px]">
             {skills.map((skill, i) => (
               <span
                 key={i}
                 className="flex rounded-full border hover:border-white/60 hover: border-white/20 bg-white/5 px-4 py-2 text-white backdrop-blur transition duration-200 justify-center items-center gap-[10px] hover:text-white/50"
               >
-                {skill.icon}
+                <Icon icon={skill.icon} height={30} />
                 {skill.name}
               </span>
             ))}
