@@ -113,7 +113,7 @@ high-quality software that makes a real impact.`}
         <div className="">
           <h1 className="text-white text-[27px] font-bold">Tools</h1>
         </div>
-        <div className="flex flex-wrap text-white gap-[10px]" id="box">
+        <div className="flex flex-wrap text-white gap-[10px]">
           {tools.map((skill, i) => (
             <div className="skile cursor-pointer" key={i}>
               <span className=" flex rounded-full border hover:border-white/60 hover: border-white/20 bg-white/5 px-4 py-2 text-white backdrop-blur transition duration-200 justify-center items-center gap-[10px] hover:text-white/50">
