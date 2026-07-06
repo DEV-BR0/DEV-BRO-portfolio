@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
-import { FaBrain, FaMagic, FaReact } from "react-icons/fa";
+import { FaBrain, FaReact } from "react-icons/fa";
+import { FaWandMagicSparkles } from "react-icons/fa6";
 import {
   SiCss,
   SiElectron,
@@ -37,7 +38,7 @@ function page() {
     { name: "SASS", icon: <SiSass /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss /> },
     { name: "GSAP", icon: <SiGsap /> },
-    { name: "AOS", icon: <FaMagic /> },
+    { name: "AOS", icon: <FaWandMagicSparkles /> },
     { name: "React Native", icon: <FaReact /> }, // alohida icon yo'q
     { name: "Node.js", icon: <SiNodedotjs /> },
     { name: "Express.js", icon: <SiExpress /> },
@@ -52,12 +53,12 @@ function page() {
     document.title = "DEV-BRO | About";
   }, []);
   return (
-    <div className="flex gap-[20px] flex-col h-[70vh] justify-center">
+    <div className="flex gap-[20px] flex-col h-[70vh] justify-center mt-[150px] lg:mt-[-100px] sm:mt-[-0px]">
       <div className="flex flex-col gap-[20px] justify-end">
         <div className="flex flex-col gap-[30px]">
           <h1 className="text-[40px] font-bold text-white">About Me</h1>
-          <div className="flex gap-[30px] items-center">
-            <pre className="text-white font-medium font-sans text-[20px]">
+          <div className="flex flex-col lg:flex-row gap-[30px] lg:items-center items-start ">
+            <pre className="text-white font-medium font-sans lg:text-[20px] md:text-[18px] sm:text-[20px] text-[12px]">
               {`I'm Ubaydulloh Dadaxonov, a passionate Full-Stack Developer
 focused on building modern, responsive, and scalable web
 applications. I enjoy creating clean and user-friendly
@@ -70,12 +71,12 @@ high-quality software that makes a real impact.`}
                 return (
                   <div
                     key={item.name}
-                    className="flex rounded-full border hover:border-white/60 hover: border-white/20 bg-white/5 px-4 py-2 text-white backdrop-blur transition duration-200 justify-center items-center gap-[10px]"
+                    className="flex rounded-full border hover:border-white/60 hover: border-white/20 bg-white/5 px-4 py-2 text-white backdrop-blur transition duration-200 justify-center items-center gap-[10px] hover:text-white/50 lg:text-[18px] md:text-[16px]"
                   >
-                    <span className="text-white" key={item.name}>
+                    <span className="" key={item.name}>
                       {item.icon}
                     </span>
-                    <p className="text-white">{item.name}</p>
+                    <p className="">{item.name}</p>
                   </div>
                 );
               })}
@@ -83,12 +84,13 @@ high-quality software that makes a real impact.`}
           </div>
         </div>
         <div className="overflow-hidden whitespace-nowrap">
-          <div className="flex w-max animate-marquee gap-8">
+          <div className="flex w-max animate-marquee gap-8 mt-[70px]">
             {skills.map((skill, i) => (
               <span
                 key={i}
-                className="rounded-full border hover:border-white/60 hover: border-white/20 bg-white/5 px-4 py-2 text-white backdrop-blur transition duration-200"
+                className="flex rounded-full border hover:border-white/60 hover: border-white/20 bg-white/5 px-4 py-2 text-white backdrop-blur transition duration-200 justify-center items-center gap-[10px] hover:text-white/50"
               >
+                {skill.icon}
                 {skill.name}
               </span>
             ))}

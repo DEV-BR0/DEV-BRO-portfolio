@@ -9,7 +9,7 @@ function page() {
   });
   return (
     <>
-      <div className="anima lg:flex-row flex flex-col-reverse w-full h-full items-center justify-center">
+      <div className="anima lg:flex-row flex flex-col-reverse w-full h-full items-center justify-center ">
         <div className="flex flex-col lg:items-start items-center gap-[40px]">
           <div className="flex flex-col lg:items-start items-center">
             <p className="text-white lg:text-[80px] md:text-[70px] text-[30px] font-medium lg:text-start text-center">
@@ -25,13 +25,13 @@ function page() {
           <div className="flex gap-[20px]">
             <Link
               href={"/about"}
-              className="backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl p-[15px] pr-[40px] pl-[40px] text-white hover:border-white/60 hover:text-white/60 transition duration-200  "
+              className="backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 flex gap-[8px] items-center p-[10px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] "
             >
               About
             </Link>
             <Link
               href={"/projects"}
-              className="backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl p-[15px] pr-[40px] pl-[40px] text-white hover:border-white/60 hover:text-white/60 transition duration-200  "
+              className="backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 flex gap-[8px] items-center p-[10px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] "
             >
               Projects
             </Link>
@@ -41,23 +41,25 @@ function page() {
           <img
             src="./hom.jpg"
             alt="Photo"
-            className="rounded-[50%] w-[350px] md:w-[400px] lg:w-[450px]"
+            className="rounded-[50%] w-[250px] md:w-[400px] lg:w-[450px]"
           />
           <div className="flex gap-[20px] lg:flex-nowrap flex-wrap justify-center">
             <Link
               href={"https://github.com/DEV-BR0"}
               target="_blank"
               rel="noopener noreferrer"
-              className="backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 flex gap-[8px] items-center p-[10px] text-[20px]"
+              className="backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 flex gap-[8px] items-center p-[10px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] "
             >
               <FaGithub />
               Github
             </Link>
             <Link
-              href={"https://www.linkedin.com/in/ubaydulloh-dadahanov-8219a43b3"}
+              href={
+                "https://www.linkedin.com/in/ubaydulloh-dadahanov-8219a43b3"
+              }
               target="_blank"
               rel="noopener noreferrer"
-              className="backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 flex gap-[8px] items-center p-[10px] text-[20px]"
+              className="backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 flex gap-[8px] items-center p-[10px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] "
             >
               <FaLinkedin />
               Linkedin
@@ -66,7 +68,7 @@ function page() {
               href={"https://t.me/DEV_BR0"}
               target="_blank"
               rel="noopener noreferrer"
-              className="backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 flex gap-[8px] items-center p-[10px] text-[20px]"
+              className="backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 flex gap-[8px] items-center p-[10px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] "
             >
               <FaTelegramPlane />
               Telegram
