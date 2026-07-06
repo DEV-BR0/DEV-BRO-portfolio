@@ -37,7 +37,7 @@ function Navbar() {
 
   return (
     <div className=" flex justify-center items-center p-[45px] pr-[15px] pl-[15px]">
-      <div className=" contenr w-full items-center fixed gap-[40px]  backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl flex justify-between  text-white p-[12px] pl-[20px] pr-[20px]">
+      <div className=" contenr w-full items-center fixed gap-[40px]  backdrop-blur-[6px] border border-white/20 rounded-2xl shadow-xl flex justify-between  text-white p-[12px] pl-[20px] pr-[20px]">
         <div className="logo">
           <img src="./fovicon.png" alt="Logo" className="w-[70px]" />
         </div>
