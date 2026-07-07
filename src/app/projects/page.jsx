@@ -22,6 +22,7 @@ function page() {
       <h1 className='text-white'>
          ali
          cencel
+         comerds
       </h1>
     </>
   );
