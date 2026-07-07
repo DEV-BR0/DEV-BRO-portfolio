@@ -26,6 +26,7 @@ function page() {
          mart
          mliea
          acnsdjkcnkksj
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, asperiores soluta!
       </h1>
     </>
   );
