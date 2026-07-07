@@ -27,6 +27,7 @@ function page() {
          mliea
          acnsdjkcnkksj
          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, asperiores soluta!
+         Lorem.
       </h1>
     </>
   );
