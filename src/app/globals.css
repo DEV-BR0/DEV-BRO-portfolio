@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 .contenr {
   max-width: 1300px;
   width: 100%;
