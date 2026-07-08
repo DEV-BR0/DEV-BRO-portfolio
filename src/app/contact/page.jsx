@@ -3,11 +3,23 @@
 import { Icon } from "@iconify/react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
+import { useGSAP } from "@gsap/react";
 
 function page() {
   useEffect(() => {
     document.title = "DEV-BRO | Contact";
   });
+
+  useGsap(()=>{
+      gsap.from('.animat',{
+      x:-100,
+      opacity:0,
+    },)
+  gsap.from('.left',{
+    x:100,
+    opacity:0
+  })
+  })
 
   const message = [
     {
@@ -71,7 +83,7 @@ function page() {
   return (
     <>
       <div className="flex gap-[20px]">
-        <div className="flex flex-col gap-[20px] w-[50%]">
+        <div className="flex flex-col gap-[20px] w-[50%] left">
           {message.map((item) => {
             return (
               <div
@@ -87,7 +99,7 @@ function page() {
             );
           })}
         </div>
-        <div className="flex flex-col w-[50%] gap-[20px]">
+        <div className="flex flex-col w-[50%] gap-[20px] animat">
           <form
             onSubmit={sendMessage}
             className="w-full flex flex-col w-[50%] gap-[20px]"
