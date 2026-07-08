@@ -17,6 +17,36 @@ function page() {
       texnologiya: ["Html", "Css"],
       github: "https://github.com/DEV-BR0/media__kfc.git",
     },
+    {
+      id: 2,
+      title: "",
+      photo: "https://i.ibb.co/yFFCxQZR/photo-6-2026-07-06-10-03-24.jpg",
+      caption:
+        "A modern and fully responsive KFC landing page built from a Figma design. This project focuses on creating a clean user interface, smooth user experience, and pixel-perfect implementation while following modern frontend development practices.",
+      demo: "https://kfc-figma.netlify.app/",
+      texnologiya: ["Html", "Css"],
+      github: "https://github.com/DEV-BR0/media__kfc.git",
+    },
+    {
+      id: 1,
+      title: "KFC",
+      photo: "https://i.ibb.co/cc81QwC2/photo-7-2026-07-06-10-03-24.jpg",
+      caption:
+        "A modern and fully responsive KFC landing page built from a Figma design. This project focuses on creating a clean user interface, smooth user experience, and pixel-perfect implementation while following modern frontend development practices.",
+      demo: "https://kfc-figma.netlify.app/",
+      texnologiya: ["Html", "Css"],
+      github: "https://github.com/DEV-BR0/media__kfc.git",
+    },
+    {
+      id: 1,
+      title: "KFC",
+      photo: "https://i.ibb.co/cc81QwC2/photo-7-2026-07-06-10-03-24.jpg",
+      caption:
+        "A modern and fully responsive KFC landing page built from a Figma design. This project focuses on creating a clean user interface, smooth user experience, and pixel-perfect implementation while following modern frontend development practices.",
+      demo: "https://kfc-figma.netlify.app/",
+      texnologiya: ["Html", "Css"],
+      github: "https://github.com/DEV-BR0/media__kfc.git",
+    },
   ];
 
   return (
