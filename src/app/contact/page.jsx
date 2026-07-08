@@ -1,18 +1,121 @@
-"use client"
+"use client";
 
-import { useEffect } from 'react';
-
-
+import { Icon } from "@iconify/react";
+import { useEffect, useState } from "react";
+import { toast } from "sonner";
 
 function page() {
-  useEffect(()=>{
-    document.title = 'DEV-BRO | Contact'
-  })
+  useEffect(() => {
+    document.title = "DEV-BRO | Contact";
+  });
+
+  const message = [
+    {
+      id: 1,
+      tel: "+998906931808",
+      caption: "Contact via phone",
+      icon: "material-symbols:call-sharp",
+    },
+    {
+      id: 2,
+      tel: "lazizbekxoljigitov@gmail.com",
+      caption: "Contact via message",
+      icon: "logos:google-gmail",
+    },
+    {
+      id: 3,
+      tel: "@DEV_BR0",
+      caption: "Contact via Telegram",
+      icon: "logos:telegram",
+    },
+  ];
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [send, setSend] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  async function sendMessage(e) {
+    e.preventDefault();
+
+    try {
+      setLoading(true);
+
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, send }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        alert("Message sent successfully!");
+        setName("");
+        setEmail("");
+        setSend("");
+      } else {
+       toast.error('message error')
+      }
+    } catch (error) {
+      console.error(error);
+     toast.error("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
     <>
-      <h1>contact</h1>
+      <div className="flex gap-[20px]">
+        <div className="flex flex-col gap-[20px] w-[50%]">
+          {message.map((item) => {
+            return (
+              <div
+                key={item.id}
+                className="backdrop-blur-[9px] gap-[20px] border border-white/20 rounded-2xl shadow-xl text-white flex flex-col  p-[10px] hover:border-white/50 transition-all duration-200 grow"
+              >
+                <div className="flex text-white items-center gap-[10px]">
+                  <Icon icon={item.icon} fontSize={20} color="green" />
+                  <p>{item.tel}</p>
+                </div>
+                <p className="text-white">{item.caption}</p>
+              </div>
+            );
+          })}
+        </div>
+        <div className="flex flex-col w-[50%] gap-[20px]">
+          <form className="w-full flex flex-col w-[50%] gap-[20px]">
+            <div className="flex w-full gap-[10px]">
+              <input
+                type="text"
+                className="text-2xl backdrop-blur-[9px] gap-[20px] border border-white/20 rounded-2xl shadow-xl text-white flex flex-col  p-[10px] hover:border-white/50 transition-all duration-200 grow text-[16px]"
+                placeholder="Enter Your Name"
+                onChange={(e) => setName(e.target.value)}
+              />
+              <input
+                type="email"
+                className="text-2xl backdrop-blur-[9px] gap-[20px] border border-white/20 rounded-2xl shadow-xl text-white flex flex-col  p-[10px] hover:border-white/50 transition-all duration-200 grow text-[16px]"
+                placeholder="Enter Your Email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <textarea
+              cols="30"
+              rows="10"
+              className="text-2xl backdrop-blur-[9px] gap-[20px] border border-white/20 rounded-2xl shadow-xl text-white flex flex-col  p-[10px] hover:border-white/50 transition-all duration-200 grow text-[16px]"
+              placeholder="Enter Your Message"
+              onChange={(e) => setSend(e.target.value)}
+            ></textarea>
+            <button className="text-2xl backdrop-blur-[9px] gap-[20px] border border-white/20 rounded-2xl shadow-xl text-white flex flex-col  p-[10px] hover:border-white/50 transition-all duration-200 grow text-[16px]">
+            
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
     </>
   );
 }
 
-export default page
+export default page;
