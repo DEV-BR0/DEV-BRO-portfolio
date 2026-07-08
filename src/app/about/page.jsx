@@ -68,12 +68,12 @@ function page() {
   }, []);
 
   return (
-    <div className="flex gap-[20px]  flex-col  justify-center mt-[0px] lg:mt-[-100px] sm:mt-[-0px]">
+    <div className="flex gap-[20px]  flex-col  justify-center mt-[0px] sm:mt-[-0px]">
       <div className="flex flex-col gap-[20px] justify-end">
         <div className="flex flex-col gap-[30px]">
-          <h1 className="about text-[40px] font-bold text-white ">About Me</h1>
           <div className="flex flex-col lg:flex-row gap-[30px] lg:items-center items-start ">
             <div className="flex flex-col gap-[30px]">
+          <h1 className="about text-[40px] font-bold text-white ">About Me</h1>
               <pre className="about  text-white font-medium font-sans lg:text-[20px] md:text-[18px] sm:text-[20px] text-[12px]">
                 {`I'm Ubaydulloh Dadaxonov, a passionate Full-Stack Developer
 focused on building modern, responsive, and scalable web
