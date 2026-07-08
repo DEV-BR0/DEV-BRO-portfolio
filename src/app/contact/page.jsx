@@ -50,18 +50,21 @@ function page() {
       const data = await res.json();
 
       if (data.success) {
-        alert("Message sent successfully!");
+        toast.success("Habar Yuborldi");
         setName("");
         setEmail("");
         setSend("");
       } else {
-       toast.error('message error')
+        toast.error("message error");
       }
     } catch (error) {
       console.error(error);
-     toast.error("Something went wrong. Please try again.");
+      toast.error("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
+      setName("");
+      setEmail("");
+      setSend("");
     }
   }
 
@@ -85,30 +88,39 @@ function page() {
           })}
         </div>
         <div className="flex flex-col w-[50%] gap-[20px]">
-          <form  className="w-full flex flex-col w-[50%] gap-[20px]">
+          <form
+            onSubmit={sendMessage}
+            className="w-full flex flex-col w-[50%] gap-[20px]"
+          >
             <div className="flex w-full gap-[10px]">
               <input
                 type="text"
+                value={name}
                 className="text-2xl backdrop-blur-[9px] gap-[20px] border border-white/20 rounded-2xl shadow-xl text-white flex flex-col  p-[10px] hover:border-white/50 transition-all duration-200 grow text-[16px]"
                 placeholder="Enter Your Name"
                 onChange={(e) => setName(e.target.value)}
               />
               <input
                 type="email"
+                value={email}
                 className="text-2xl backdrop-blur-[9px] gap-[20px] border border-white/20 rounded-2xl shadow-xl text-white flex flex-col  p-[10px] hover:border-white/50 transition-all duration-200 grow text-[16px]"
                 placeholder="Enter Your Email"
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <textarea
+            value={send}
               cols="30"
               rows="10"
               className="text-2xl backdrop-blur-[9px] gap-[20px] border border-white/20 rounded-2xl shadow-xl text-white flex flex-col  p-[10px] hover:border-white/50 transition-all duration-200 grow text-[16px]"
               placeholder="Enter Your Message"
               onChange={(e) => setSend(e.target.value)}
             ></textarea>
-            <button className="text-2xl backdrop-blur-[9px] gap-[20px] border border-white/20 rounded-2xl shadow-xl text-white flex flex-col  p-[10px] hover:border-white/50 transition-all duration-200 grow text-[16px]">
-
+            <button
+              type="submit"
+              disabled={loading}
+              className="text-2xl backdrop-blur-[9px] gap-[20px] border border-white/20 rounded-2xl shadow-xl text-white flex flex-col  p-[10px] hover:border-white/50 transition-all duration-200 grow text-[16px]"
+            >
               Send Message
             </button>
           </form>
