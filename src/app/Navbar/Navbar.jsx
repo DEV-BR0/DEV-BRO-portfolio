@@ -23,8 +23,8 @@ function Navbar() {
   }, [pathname]);
 
   return (
-    <div className="top-0 z-40 flex justify-center items-center p-[45px] pr-[15px] pl-[15px]">
-      <div className=" top-[10px] contenr w-full items-center fixed gap-[40px]  backdrop-blur-[6px] border border-white/20 rounded-2xl shadow-xl flex justify-between  text-white p-[12px] pl-[20px] pr-[20px]">
+    <div className="fixed top-6 left-0 right-0 flex justify-center z-40">
+      <div className="contenr w-[95%] max-w-7xl items-center fixed gap-[40px]  backdrop-blur-[6px] border border-white/20 rounded-2xl shadow-xl flex justify-between  text-white p-[12px] pl-[20px] pr-[20px] ">
         <div className="logo">
           <img src="./fovicon.png" alt="Logo" className="w-[70px]" />
         </div>

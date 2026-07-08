@@ -29,11 +29,11 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col items-center justify-center contenr  bg-black ">
+      <body className="min-h-full flex flex-col items-center justify-center contenr bg-black ">
         <Toaster position="top-center" />
         <ContourBackground />
         <Navbar />
-        <main className="min-h-full flex flex-col lg:mt-[120px] mt-[50px] w-full max-w-[1300px]">
+        <main className="min-h-full flex flex-col lg:mt-[120px] mt-[90px] w-full max-w-[1300px]">
           {children}
         </main>
       </body>

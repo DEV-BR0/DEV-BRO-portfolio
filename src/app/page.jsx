@@ -9,7 +9,7 @@ import { useEffect } from "react";
 function page() {
   useEffect(() => {
     document.title = "DEV-BRO | Home";
-  });
+  }, []);
 
   useGSAP(() => {
     gsap.from(".title", {
@@ -22,7 +22,7 @@ function page() {
       opacity: 0,
       stagger: 0.1,
     });
-  });
+  }, []);
 
   return (
     <>
@@ -77,9 +77,7 @@ with clean, maintainable code and a great user experience.`}
             </div>
             <div className="ong">
               <Link
-                href={
-                  "https://www.linkedin.com/in/ubaydulloh-dadahanov"
-                }
+                href={"https://www.linkedin.com/in/ubaydulloh-dadahanov"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className=" backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 flex gap-[8px] items-center p-[10px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] "
