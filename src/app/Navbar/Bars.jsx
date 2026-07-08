@@ -76,7 +76,7 @@ function Bars({ modal, setModal }) {
       <div
         ref={menuRef}
         onClick={(e) => e.stopPropagation()}
-        className="h-screen w-[70%] bg-black/70 backdrop-blur-2xl border-l border-white/20 p-6 text-white"
+        className="h-screen w-[70%] bg-black backdrop-blur-2xl border-l border-white/20 p-6 text-white"
       >
         <img src="/fovicon.png" className="w-24 mx-auto mb-10" alt="logo" />
 
