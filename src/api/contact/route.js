@@ -3,9 +3,9 @@ export async function POST(request) {
   const CHAT_ID = 8194599016;
 
   try {
-    const { name, email, message } = await request.json();
+    const { name, email, send } = await request.json();
 
-    if (!name || !email || !message) {
+    if (!name || !email || !send) {
       return Response.json(
         {
           success: false,
@@ -21,7 +21,7 @@ Portfoliodan xabar:
 Ismi: ${name}
 Emaili: ${email}
 
-Xabar: ${message}
+Xabar: ${send}
     `;
 
     const res = await fetch(

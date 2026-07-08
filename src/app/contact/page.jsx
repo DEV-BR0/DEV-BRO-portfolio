@@ -85,7 +85,7 @@ function page() {
           })}
         </div>
         <div className="flex flex-col w-[50%] gap-[20px]">
-          <form className="w-full flex flex-col w-[50%] gap-[20px]">
+          <form  className="w-full flex flex-col w-[50%] gap-[20px]">
             <div className="flex w-full gap-[10px]">
               <input
                 type="text"
@@ -108,7 +108,7 @@ function page() {
               onChange={(e) => setSend(e.target.value)}
             ></textarea>
             <button className="text-2xl backdrop-blur-[9px] gap-[20px] border border-white/20 rounded-2xl shadow-xl text-white flex flex-col  p-[10px] hover:border-white/50 transition-all duration-200 grow text-[16px]">
-            
+
               Send Message
             </button>
           </form>
