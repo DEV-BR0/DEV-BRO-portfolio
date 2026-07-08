@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from "react";
-
+import { Icon } from "@iconify/react";
 function page() {
   useEffect(() => {
     document.title = "DEV-BRO | Projects";
@@ -50,16 +50,16 @@ function page() {
                   <a
                     target="_blank"
                     href={`${i.demo}`}
-                    className="p-[10px] backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 flex gap-[8px] items-center p-[10px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] "
+                    className="p-[10px] backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 text-[17px] flex gap-[10px] items-center"
                   >
                     Demo Site
                   </a>
                   <a
                     target="_blank"
                     href={`${i.github}`}
-                    className="p-[10px] backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 flex gap-[8px] items-center p-[10px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] "
+                    className="p-[10px] backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 text-[17px] flex gap-[10px] items-center"
                   >
-                    
+                    <Icon icon={"simple-icons:github"} />
                     GitHub Code
                   </a>
                 </div>

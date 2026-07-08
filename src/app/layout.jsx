@@ -1,6 +1,7 @@
+import "aos/dist/aos.css";
 import { Geist, Geist_Mono } from "next/font/google";
+import ContourBackground from "./backgraund";
 import "./globals.css";
-import "aos/dist/aos.css"
 import Navbar from "./Navbar/Navbar";
 
 const geistSans = Geist({
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col items-center contenr  bg-black ">
+        <ContourBackground />
         <Navbar />
         <main className="min-h-full flex flex-col lg:mt-[120px] mt-[50px] w-full max-w-[1300px]">
           {children}
