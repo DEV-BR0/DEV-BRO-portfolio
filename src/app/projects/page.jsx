@@ -15,6 +15,7 @@ function page() {
         "A modern and fully responsive KFC landing page built from a Figma design. This project focuses on creating a clean user interface, smooth user experience, and pixel-perfect implementation while following modern frontend development practices.",
       demo: "https://kfc-figma.netlify.app/",
       texnologiya: ["Html", "Css"],
+      github: "https://github.com/DEV-BR0/media__kfc.git",
     },
   ];
 
@@ -25,20 +26,20 @@ function page() {
           return (
             <div
               key={i.id}
-              className=" w-[250px] backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60"
+              className="backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 flex gap-[8px] items-center p-[10px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px]  flex-col w-[330px]"
             >
-              <img src={i.photo} alt="Projects-photo" className="rounded-xl"/>
-              <div className="flex flex-col">
+              <img src={i.photo} alt="Projects-photo" className="rounded-xl" />
+              <div className="flex flex-col p-[10px] gap-[10px]">
                 <p className="text-[24px] text-white font-bold">{i.title}</p>
-                <p className="text-[17px] text-white  font-medium truncate">
+                <p className="text-sm text-gray-400 leading-7 line-clamp-3  ">
                   {i.caption}
                 </p>
-                <div className="flex">
+                <div className="flex gap-[10px]">
                   {i.texnologiya.map((tex) => {
                     return (
                       <p
                         key={tex}
-                        className=" backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 flex gap-[8px] items-center p-[10px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px]"
+                        className=" backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 flex gap-[8px]  p-[6px] cursor-pointer"
                       >
                         {tex}
                       </p>
@@ -46,8 +47,20 @@ function page() {
                   })}
                 </div>
                 <div className="flex gap-[20px]">
-                  <a target="_blank" href={`${i.demo}`}>
+                  <a
+                    target="_blank"
+                    href={`${i.demo}`}
+                    className="p-[10px] backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 flex gap-[8px] items-center p-[10px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] "
+                  >
                     Demo Site
+                  </a>
+                  <a
+                    target="_blank"
+                    href={`${i.github}`}
+                    className="p-[10px] backdrop-blur-[9px] border border-white/20 rounded-2xl shadow-xl text-white hover:border-white/60 hover:text-white/60 transition duration-200 flex gap-[8px] items-center p-[10px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] "
+                  >
+                    
+                    GitHub Code
                   </a>
                 </div>
               </div>
