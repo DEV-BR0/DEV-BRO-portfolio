@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
         <Toaster position="top-center" />
         <ContourBackground />
         <Navbar />
-        <main className="min-h-full flex flex-col lg:mt-[120px] mt-[90px] w-full max-w-[1300px]">
+        <main className="min-h-full flex flex-col lg:mt-[120px] mt-[120px] w-full max-w-[1300px]">
           {children}
         </main>
       </body>
