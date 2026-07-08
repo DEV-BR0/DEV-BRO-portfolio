@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { FaBars } from "react-icons/fa6";
+import Bars from "./Bars";
 
 function Navbar() {
   const [active, setActive] = useState("home");
   const pathname = usePathname();
-  const [start, setSart] = useState(false);
 
   useEffect(() => {
     if (pathname === "/") {
@@ -27,7 +28,15 @@ function Navbar() {
         <div className="logo">
           <img src="./fovicon.png" alt="Logo" className="w-[70px]" />
         </div>
-        <div className=" flex gap-[20px]">
+        <div
+          onClick={() => setActive("modal")}
+          className="sm:hidden block p-[10px] backdrop-blur-[6px] border border-white/20 rounded-2xl shadow-xl items-center justify-center "
+        >
+          <FaBars />
+        </div>
+        {active == "modal" ? <Bars modal={active} setModal={setActive} /> : ""}
+
+        <div className=" flex gap-5 sm:block hidden">
           <Link
             href={"/"}
             onClick={() => setActive("home")}

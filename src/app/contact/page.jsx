@@ -1,25 +1,26 @@
 "use client";
 
+import { useGSAP } from "@gsap/react";
 import { Icon } from "@iconify/react";
+import gsap from "gsap";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
-import { useGSAP } from "@gsap/react";
 
 function page() {
   useEffect(() => {
     document.title = "DEV-BRO | Contact";
   });
 
-  useGsap(()=>{
-      gsap.from('.animat',{
-      x:-100,
-      opacity:0,
-    },)
-  gsap.from('.left',{
-    x:100,
-    opacity:0
-  })
-  })
+  useGSAP(() => {
+    gsap.from(".animat", {
+      x: 100,
+      opacity: 0,
+    });
+    gsap.from(".left", {
+      x: -100,
+      opacity: 0,
+    });
+  });
 
   const message = [
     {
@@ -82,13 +83,13 @@ function page() {
 
   return (
     <>
-      <div className="flex gap-[20px]">
-        <div className="flex flex-col gap-[20px] w-[50%] left">
+      <div className="flex gap-[20px] md:flex-row flex-col-reverse  ">
+        <div className="flex flex-col gap-[20px] lg:w-[50%] w-full left">
           {message.map((item) => {
             return (
               <div
                 key={item.id}
-                className="backdrop-blur-[9px] gap-[20px] border border-white/20 rounded-2xl shadow-xl text-white flex flex-col  p-[10px] hover:border-white/50 transition-all duration-200 grow"
+                className="backdrop-blur-[9px] gap-[20px] border border-white/20 rounded-2xl shadow-xl text-white flex flex-col  p-[10px] hover:border-white/50 transition-all duration-200 grow w-full"
               >
                 <div className="flex text-white items-center gap-[10px]">
                   <Icon icon={item.icon} fontSize={20} color="green" />
@@ -99,12 +100,12 @@ function page() {
             );
           })}
         </div>
-        <div className="flex flex-col w-[50%] gap-[20px] animat">
+        <div className="flex flex-col lg:w-[50%] w-full gap-[20px] animat">
           <form
             onSubmit={sendMessage}
-            className="w-full flex flex-col w-[50%] gap-[20px]"
+            className="w-full flex flex-col gap-[20px]"
           >
-            <div className="flex w-full gap-[10px]">
+            <div className="flex lg:flex-row flex-col w-full gap-[10px]">
               <input
                 type="text"
                 value={name}
@@ -121,7 +122,7 @@ function page() {
               />
             </div>
             <textarea
-            value={send}
+              value={send}
               cols="30"
               rows="10"
               className="text-2xl backdrop-blur-[9px] gap-[20px] border border-white/20 rounded-2xl shadow-xl text-white flex flex-col  p-[10px] hover:border-white/50 transition-all duration-200 grow text-[16px]"
