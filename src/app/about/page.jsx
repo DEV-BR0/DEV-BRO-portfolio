@@ -34,10 +34,6 @@ function page() {
   const animationSkills = [
     { name: "GSAP", icon: "logos:greensock-icon" },
     { name: "AOS", icon: "solar:magic-stick-3-bold-duotone" },
-    { name: "Three.js", icon: "simple-icons:threedotjs" },
-    { name: "React Three Fiber", icon: "logos:react" },
-    { name: "Drei", icon: "simple-icons:threedotjs" },
-    { name: "WebGL", icon: "simple-icons:webgl" },
   ];
 
   const aiSkills = [
