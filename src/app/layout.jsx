@@ -4,7 +4,6 @@ import { Toaster } from "sonner";
 import ContourBackground from "./backgraund";
 import "./globals.css";
 import Navbar from "./Navbar/Navbar";
-import "./i18next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
