@@ -7,7 +7,8 @@ import { useEffect } from "react";
 function page() {
   const frontendSkills = [
     { name: "HTML", icon: "vscode-icons:file-type-html" },
-    { name: "CSS", icon: "vscode-icons:file-type-css" },
+    { name: "CSS", icon: "vsc
+      ode-icons:file-type-css" },
     { name: "JavaScript", icon: "logos:javascript" },
     { name: "React", icon: "logos:react" },
     { name: "Next.js", icon: "logos:nextjs-icon" },
@@ -157,7 +158,7 @@ high-quality software that makes a real impact.`}
         </div>
       </div>
       <div className="flex flex-col gap-[20px] ">
-        <h1 className="text-white text-[27px] skile">Animtion Skills</h1>
+        <h1 className="text-white text-[27px] skile">Animation Skills</h1>
         <div className="flex flex-wrap gap-[10px]">
           {animationSkills.map((skill, i) => (
             <div className="skile cursor-pointer" key={i}>
@@ -170,7 +171,7 @@ high-quality software that makes a real impact.`}
         </div>
       </div>
       <div className="flex flex-col gap-[20px] ">
-        <h1 className="text-white text-[27px] skile">Ai Skills</h1>
+        <h1 className="text-white text-[27px] skile">AI Skills</h1>
         <div className="flex flex-wrap gap-[10px]">
           {aiSkills.map((skill, i) => (
             <div className="skile cursor-pointer" key={i}>
@@ -187,3 +188,4 @@ high-quality software that makes a real impact.`}
 }
 
 export default page;
+  
