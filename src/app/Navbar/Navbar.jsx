@@ -25,7 +25,6 @@ function Navbar() {
   return (
     <div className="fixed top-6 left-0 right-0 z-50 flex justify-center">
       <div className="text-white w-[95%] max-w-7xl flex items-center justify-between px-5 py-3 backdrop-blur-md bg-white/5 border border-white/20 rounded-2xl shadow-xl">
-        {/* Logo */}
         <Link href="/">
           <img
             src="/fovicon.png"
@@ -34,7 +33,6 @@ function Navbar() {
           />
         </Link>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={() => setActive("modal")}
           className="block sm:hidden p-3 rounded-xl backdrop-blur-md bg-white/10 border border-white/20 transition hover:bg-white/20"
@@ -42,10 +40,8 @@ function Navbar() {
           <FaBars className="text-xl text-white" />
         </button>
 
-        {/* Mobile Menu */}
         {active === "modal" && <Bars modal={active} setModal={setActive} />}
 
-        {/* Desktop Menu */}
         <div className="hidden sm:flex items-center gap-2">
           <Link
             href="/"
