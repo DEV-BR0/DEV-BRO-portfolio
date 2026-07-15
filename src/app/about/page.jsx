@@ -7,28 +7,19 @@ import { useEffect } from "react";
 function page() {
   const frontendSkills = [
     { name: "HTML", icon: "vscode-icons:file-type-html" },
-    { name: "CSS", icon: "vsc
-      ode-icons:file-type-css" },
+    { name: "CSS", icon: "vscode-icons:file-type-css" },
     { name: "JavaScript", icon: "logos:javascript" },
     { name: "React", icon: "logos:react" },
     { name: "Next.js", icon: "logos:nextjs-icon" },
     { name: "Vue.js", icon: "logos:vue" },
-    { name: "Preact", icon: "logos:preact" },
-    { name: "Svelte", icon: "logos:svelte-icon" },
-    { name: "SvelteKit", icon: "logos:svelte-kit" },
-    { name: "Electron", icon: "logos:electron" },
     { name: "SASS", icon: "logos:sass" },
     { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
-    { name: "React Native", icon: "logos:react" },
     { name: "Webpack", icon: "logos:webpack" },
   ];
 
   const backendSkills = [
     { name: "Node.js", icon: "logos:nodejs-icon" },
-    { name: "Express.js", icon: "skill-icons:expressjs-dark" },
     { name: "Python", icon: "logos:python" },
-    { name: "Flask", icon: "skill-icons:flask-light" },
-    { name: "REST API", icon: "logos:openapi-icon" },
     { name: "node-telegram-bot-api", icon: "logos:telegram" },
   ];
 
@@ -188,4 +179,3 @@ high-quality software that makes a real impact.`}
 }
 
 export default page;
-  
