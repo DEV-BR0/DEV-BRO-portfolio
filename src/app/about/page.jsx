@@ -12,6 +12,9 @@ function page() {
     { name: "React", icon: "logos:react" },
     { name: "Next.js", icon: "logos:nextjs-icon" },
     { name: "Vue.js", icon: "logos:vue" },
+    { name: "Svelte", icon: "logos:svelte-icon" },
+    { icon: "logos:svelte-kit" },
+    { name: "Preact", icon: "logos:preact" },
     { name: "SASS", icon: "logos:sass" },
     { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
     { name: "Webpack", icon: "logos:webpack" },
@@ -51,8 +54,6 @@ function page() {
     { name: "Prettier", icon: "logos:prettier" },
     { name: "Vite", icon: "logos:vitejs" },
     { name: "OpenAI", icon: "simple-icons:openai" },
-    { name: "Google Gemini", icon: "simple-icons:googlegemini" },
-    { name: "Claude", icon: "simple-icons:claude" },
   ];
   useGSAP(() => {
     gsap.from(".skile", {
