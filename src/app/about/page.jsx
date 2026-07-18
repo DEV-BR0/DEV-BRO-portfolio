@@ -18,6 +18,9 @@ function page() {
     { name: "SASS", icon: "logos:sass" },
     { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
     { name: "Webpack", icon: "logos:webpack" },
+    { name: "REST API", icon: "tabler:world-www" },
+    { name: "Axios", icon: "mdi:api" },
+    { name: "Sonner", icon: "tabler:notification" },
   ];
 
   const backendSkills = [
