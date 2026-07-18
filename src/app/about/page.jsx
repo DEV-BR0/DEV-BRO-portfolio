@@ -7,8 +7,7 @@ import { useEffect } from "react";
 function page() {
   const frontendSkills = [
     { name: "HTML", icon: "vscode-icons:file-type-html" },
-    { name: "CSS", icon: "vsc
-      ode-icons:file-type-css" },
+    { name: "CSS", icon: "vscode-icons:file-type-css" },
     { name: "JavaScript", icon: "logos:javascript" },
     { name: "React", icon: "logos:react" },
     { name: "Next.js", icon: "logos:nextjs-icon" },
@@ -188,4 +187,3 @@ high-quality software that makes a real impact.`}
 }
 
 export default page;
-  
