@@ -18,17 +18,26 @@ function page() {
     { name: "SASS", icon: "logos:sass" },
     { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
     { name: "Webpack", icon: "logos:webpack" },
+    { name: "REST API", icon: "tabler:world-www" },
+    { name: "Axios", icon: "mdi:api" },
+    { name: "Sonner", icon: "tabler:notification" },
+    { name: "Swiper", icon: "simple-icons:swiper" },
+    { name: "React Hook Form", icon: "simple-icons:reacthookform" },
+    { name: "npm", icon: "logos:npm-icon" },
+    { name: "Redux Toolkit", icon: "logos:redux" },
   ];
 
   const backendSkills = [
-    { name: "Node.js", icon: "logos:nodejs-icon" },
     { name: "Python", icon: "logos:python" },
+    { name: "Flask", icon: "skill-icons:flask-dark" },
+    { name: "Node.js", icon: "logos:nodejs-icon" },
     { name: "node-telegram-bot-api", icon: "logos:telegram" },
   ];
 
   const animationSkills = [
     { name: "GSAP", icon: "logos:greensock-icon" },
     { name: "AOS", icon: "solar:magic-stick-3-bold-duotone" },
+    { name: "Keyframes", icon: "mdi:animation-outline" },
   ];
 
   const aiSkills = [
