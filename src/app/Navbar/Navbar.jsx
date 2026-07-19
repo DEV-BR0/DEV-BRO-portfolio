@@ -23,7 +23,7 @@ function Navbar() {
   }, [pathname]);
 
   return (
-    <div className="fixed top-6 left-0 right-0 z-50 flex justify-center">
+    <div className="fixed top-6 left-0 right-0 z-50 flex justify-center p-[10px]">
       <div className="text-white w-full max-w-7xl flex items-center justify-between px-5 py-3 backdrop-blur-md bg-white/5 border border-white/20 rounded-2xl shadow-xl">
         <Link href="/">
           <img
