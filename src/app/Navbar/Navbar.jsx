@@ -24,12 +24,13 @@ function Navbar() {
 
   return (
     <div className="fixed top-6 left-0 right-0 z-50 flex justify-center p-[10px]">
-      <div className="text-white w-full !max-w-[1300px] flex items-center justify-between px-5 py-3 backdrop-blur-md bg-white/5 border border-white/20 rounded-2xl shadow-xl">
+      <div className="text-white w-full !max-w-[1300px] flex items-center justify-between px-5">
         <Link href="/">
           <img
             src="/fovicon.png"
             alt="Logo"
-            className="w-12 sm:w-16 cursor-pointer"
+            width={60}
+            className=" sm:w-16 cursor-pointer py-3 backdrop-blur-md bg-white/5 border border-white/20 rounded-2xl shadow-xl p-[10px]"
           />
         </Link>
 
