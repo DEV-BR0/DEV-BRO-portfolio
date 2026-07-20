@@ -43,7 +43,7 @@ function Navbar() {
 
         {active === "modal" && <Bars modal={active} setModal={setActive} />}
 
-        <div className="hidden sm:flex items-center gap-2">
+        <div className="hidden sm:flex items-center gap-2 py-3 backdrop-blur-md bg-white/5 border border-white/20 rounded-2xl shadow-xl p-[10px]">
           <Link
             href="/"
             onClick={() => setActive("home")}
