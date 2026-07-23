@@ -29,6 +29,16 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <meta
+          name="description"
+          content="I am a Full-Stack Developer specializing in JavaScript. My
+favorite technologies to work with are Next.js and Vue.js. I enjoy
+building modern, responsive, and high-performance web applications
+with clean, maintainable code and a great user experience."
+        />
+        <meta title="DEV-RB0" />
+      </head>
       <body className="min-h-full flex flex-col items-center justify-center contenr bg-black ">
         <Toaster position="top-center" />
         <ContourBackground />
