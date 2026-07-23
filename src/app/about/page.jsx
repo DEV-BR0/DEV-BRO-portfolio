@@ -83,6 +83,8 @@ function page() {
     
     { name: "Ollama", icon: "simple-icons:ollama" },
   ];
+
+  
   useGSAP(() => {
     gsap.from(".skile", {
       y: 70,
