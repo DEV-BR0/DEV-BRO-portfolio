@@ -80,11 +80,10 @@ function page() {
     { name: "Hugging Face", icon: "simple-icons:huggingface" },
     { name: "LangChain", icon: "simple-icons:langchain" },
     { name: "Llama", icon: "simple-icons:meta" },
-    
+
     { name: "Ollama", icon: "simple-icons:ollama" },
   ];
 
-  
   useGSAP(() => {
     gsap.from(".skile", {
       y: 70,
