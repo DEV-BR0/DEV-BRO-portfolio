@@ -11,9 +11,6 @@ function page() {
     { name: "JavaScript (ES6+)", icon: "logos:javascript" },
     { name: "React.js", icon: "logos:react" },
     { name: "Next.js", icon: "logos:nextjs-icon" },
-    { name: "Vue.js", icon: "logos:vue" },
-    { name: "Svelte", icon: "logos:svelte-icon" },
-    { icon: "logos:svelte-kit" },
     { name: "Preact", icon: "logos:preact" },
     { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
     { name: "Redux Toolkit", icon: "logos:redux" },
@@ -22,63 +19,6 @@ function page() {
     { name: "React Hook Form", icon: "logos:react" },
     { name: "Swiper.js", icon: "skill-icons:html" },
     { name: "Sonner", icon: "logos:react" },
-  ];
-
-  const backendSkills = [
-    { name: "Node.js", icon: "logos:nodejs-icon" },
-    { name: "Express.js", icon: "skill-icons:expressjs-dark" },
-    { name: "Python", icon: "logos:python" },
-    { name: "Flask", icon: "skill-icons:flask-dark" },
-    { name: "JWT", icon: "logos:jwt-icon" },
-    { name: "UUID", icon: "mdi:identifier" },
-    { name: "dotenv", icon: "vscode-icons:file-type-dotenv" },
-    { name: "Linux", icon: "logos:linux-tux" },
-    { name: "Ubuntu", icon: "logos:ubuntu" },
-  ];
-
-  const databaseSkills = [
-    { name: "MongoDB", icon: "logos:mongodb-icon" },
-    { name: "Mongoose", icon: "skill-icons:mongodb" },
-    { name: "JSON Server", icon: "vscode-icons:file-type-json" },
-  ];
-
-  const animationSkills = [
-    { name: "GSAP", icon: "logos:greensock-icon" },
-    { name: "AOS", icon: "skill-icons:css" },
-    { name: "CSS Keyframes", icon: "vscode-icons:file-type-css" },
-  ];
-
-  const tools = [
-    { name: "Git", icon: "logos:git-icon" },
-    { name: "GitHub", icon: "simple-icons:github" },
-    { name: "npm", icon: "logos:npm-icon" },
-    { name: "Vite", icon: "logos:vitejs" },
-    { name: "Webpack", icon: "logos:webpack" },
-    { name: "Prettier", icon: "logos:prettier" },
-    { name: "Postman", icon: "logos:postman-icon" },
-    { name: "Figma", icon: "logos:figma" },
-    { name: "Vercel", icon: "logos:vercel-icon" },
-    { name: "Netlify", icon: "logos:netlify-icon" },
-    { name: "Railway", icon: "simple-icons:railway" },
-    { name: "Render", icon: "simple-icons:render" },
-  ];
-
-  const aiSkills = [
-    { name: "ChatGPT", icon: "simple-icons:openai" },
-    { name: "Claude AI", icon: "simple-icons:anthropic" },
-    { name: "Google Gemini", icon: "simple-icons:googlegemini" },
-    { name: "GitHub Copilot", icon: "simple-icons:githubcopilot" },
-    { name: "Cursor AI", icon: "simple-icons:cursor" },
-    { name: "Perplexity AI", icon: "simple-icons:perplexity" },
-    { name: "DeepSeek", icon: "simple-icons:deepseek" },
-    { name: "Runway ML", icon: "mdi:video-box" }, // generic - rasmiy logo topilmadi
-    { name: "Leonardo AI", icon: "mdi:palette" }, // generic - rasmiy logo topilmadi
-    { name: "NotebookLM", icon: "simple-icons:googlebard" },
-    { name: "Grok AI", icon: "simple-icons:x" },
-    { name: "Hugging Face", icon: "simple-icons:huggingface" },
-    { name: "LangChain", icon: "simple-icons:langchain" },
-    { name: "Llama", icon: "simple-icons:meta" },
-    { name: "Ollama", icon: "simple-icons:ollama" },
   ];
 
   useGSAP(() => {
@@ -145,70 +85,6 @@ high-quality software that makes a real impact.`}
               </span>
             ))}
           </div>
-        </div>
-      </div>
-      <div className="flex flex-col gap-[20px] ">
-        <h1 className="text-white text-[27px] skile">Backend Skills</h1>
-        <div className="flex flex-wrap gap-[10px]">
-          {backendSkills.map((skill, i) => (
-            <div className="skile cursor-pointer" key={i}>
-              <span className=" flex rounded-full border hover:border-white/60 hover: border-white/20 bg-white/5 px-4 py-2 text-white backdrop-blur transition duration-200 justify-center items-center gap-[10px] hover:text-white/50">
-                <Icon icon={skill.icon} height={30} />
-                {skill.name}
-              </span>
-            </div>
-          ))}
-          {databaseSkills.map((item, i) => {
-            return (
-              <div className="skile cursor-pointer" key={i}>
-                <span className=" flex rounded-full border hover:border-white/60 hover: border-white/20 bg-white/5 px-4 py-2 text-white backdrop-blur transition duration-200 justify-center items-center gap-[10px] hover:text-white/50">
-                  <Icon icon={item.icon} height={30} />
-                  {item.name}
-                </span>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      <div className="flex flex-col gap-[30px]">
-        <div className="">
-          <h1 className="text-white text-[27px] font-bold skile">Tools</h1>
-        </div>
-        <div className="flex flex-wrap text-white gap-[10px]">
-          {tools.map((skill, i) => (
-            <div className="skile cursor-pointer" key={i}>
-              <span className=" flex rounded-full border hover:border-white/60 hover: border-white/20 bg-white/5 px-4 py-2 text-white backdrop-blur transition duration-200 justify-center items-center gap-[10px] hover:text-white/50">
-                <Icon icon={skill.icon} height={30} />
-                {skill.name}
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="flex flex-col gap-[20px] ">
-        <h1 className="text-white text-[27px] skile">Animation Skills</h1>
-        <div className="flex flex-wrap gap-[10px]">
-          {animationSkills.map((skill, i) => (
-            <div className="skile cursor-pointer" key={i}>
-              <span className=" flex rounded-full border hover:border-white/60 hover: border-white/20 bg-white/5 px-4 py-2 text-white backdrop-blur transition duration-200 justify-center items-center gap-[10px] hover:text-white/50">
-                <Icon icon={skill.icon} height={30} />
-                {skill.name}
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="flex flex-col gap-[20px] ">
-        <h1 className="text-white text-[27px] skile">AI Skills</h1>
-        <div className="flex flex-wrap gap-[10px]">
-          {aiSkills.map((skill, i) => (
-            <div className="skile cursor-pointer" key={i}>
-              <span className=" flex rounded-full border hover:border-white/60 hover: border-white/20 bg-white/5 px-4 py-2 text-white backdrop-blur transition duration-200 justify-center items-center gap-[10px] hover:text-white/50">
-                <Icon icon={skill.icon} height={30} />
-                {skill.name}
-              </span>
-            </div>
-          ))}
         </div>
       </div>
     </div>
