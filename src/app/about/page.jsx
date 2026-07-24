@@ -13,7 +13,7 @@ function page() {
     { name: "Next.js", icon: "logos:nextjs-icon" },
     { name: "Vue.js", icon: "logos:vue" },
     { name: "Svelte", icon: "logos:svelte-icon" },
-    { name: "SvelteKit", icon: "logos:svelte-kit" },
+    { icon: "logos:svelte-kit" },
     { name: "Preact", icon: "logos:preact" },
     { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
     { name: "Redux Toolkit", icon: "logos:redux" },
@@ -65,14 +65,12 @@ function page() {
 
   const aiSkills = [
     { name: "ChatGPT", icon: "simple-icons:openai" },
-    { name: "OpenAI API", icon: "simple-icons:openai" },
     { name: "Claude AI", icon: "simple-icons:anthropic" },
     { name: "Google Gemini", icon: "simple-icons:googlegemini" },
     { name: "GitHub Copilot", icon: "simple-icons:githubcopilot" },
     { name: "Cursor AI", icon: "simple-icons:cursor" },
     { name: "Perplexity AI", icon: "simple-icons:perplexity" },
     { name: "DeepSeek", icon: "simple-icons:deepseek" },
-    { name: "DALL·E", icon: "simple-icons:openai" },
     { name: "Runway ML", icon: "mdi:video-box" }, // generic - rasmiy logo topilmadi
     { name: "Leonardo AI", icon: "mdi:palette" }, // generic - rasmiy logo topilmadi
     { name: "NotebookLM", icon: "simple-icons:googlebard" },
